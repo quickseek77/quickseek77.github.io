@@ -149,9 +149,9 @@ svg {
 
 .hero {
   position: relative;
-  min-height: clamp(780px, calc(100svh - 104px), 880px);
-  padding: clamp(94px, 11vh, 110px) max(24px, calc((100% - 1200px) / 2)) 152px;
+  padding: clamp(94px, 11vh, 110px) max(24px, calc((100% - 1200px) / 2)) 32px;
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   overflow: hidden;
 }
@@ -295,11 +295,10 @@ svg {
 }
 
 .hero-highlights {
-  position: absolute;
+  position: relative;
   z-index: 1;
-  right: max(24px, calc((100% - 1200px) / 2));
-  bottom: 24px;
-  left: max(24px, calc((100% - 1200px) / 2));
+  width: 100%;
+  margin-top: 32px;
   display: grid;
   grid-template-columns: 1fr 54px 1.42fr;
   align-items: center;
@@ -731,8 +730,7 @@ svg {
   }
 
   .hero {
-    min-height: max(844px, calc(100svh - 72px));
-    padding: 88px 18px 156px;
+    padding: 88px 18px 24px;
   }
 
   .hero-image {
@@ -789,9 +787,7 @@ svg {
   }
 
   .hero-highlights {
-    right: 18px;
-    bottom: 18px;
-    left: 18px;
+    margin-top: 24px;
     display: block;
   }
 
