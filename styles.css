@@ -149,8 +149,8 @@ svg {
 
 .hero {
   position: relative;
-  min-height: clamp(740px, calc(100svh - 70px), 860px);
-  padding: clamp(100px, 12vh, 118px) max(24px, calc((100% - 1200px) / 2)) 160px;
+  min-height: clamp(780px, calc(100svh - 104px), 880px);
+  padding: clamp(94px, 11vh, 110px) max(24px, calc((100% - 1200px) / 2)) 152px;
   display: flex;
   align-items: flex-start;
   overflow: hidden;
@@ -224,23 +224,39 @@ svg {
 }
 
 .hero-contrast {
-  margin-top: 26px;
-  width: min(485px, 100%);
-  display: grid;
-  gap: 7px;
+  margin-top: 25px;
+  width: min(540px, 100%);
+  padding: 14px;
+  border: 1px solid rgba(100, 235, 224, 0.24);
+  border-radius: var(--radius);
+  background: rgba(7, 16, 20, 0.64);
+  backdrop-filter: blur(9px);
 }
 
-.hero-contrast p {
-  display: flex;
-  align-items: baseline;
-  gap: 17px;
+.contrast-title {
+  margin: 0 0 10px 2px;
   color: var(--text-dim);
-  font-size: 13px;
+  font-size: 12px;
 }
 
-.hero-contrast span {
-  width: 146px;
-  flex-shrink: 0;
+.contrast-grid {
+  display: grid;
+  grid-template-columns: 0.86fr 1.14fr;
+  gap: 8px;
+}
+
+.contrast-grid article {
+  min-height: 94px;
+  padding: 12px 12px 11px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.contrast-grid span {
   color: #728581;
   font-size: 11px;
   font-weight: 600;
@@ -248,21 +264,41 @@ svg {
   letter-spacing: 0.1em;
 }
 
-.hero-contrast .product {
-  color: var(--text);
-  font-size: 15px;
+.contrast-grid strong {
+  color: var(--text-dim);
+  font-size: 14px;
   font-weight: 520;
 }
 
-.hero-contrast .product span {
+.contrast-grid small {
+  color: #738481;
+  font-size: 11px;
+}
+
+.personal-answer {
+  border-color: rgba(86, 223, 220, 0.52) !important;
+  background: rgba(86, 223, 220, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(86, 223, 220, 0.08);
+}
+
+.personal-answer span {
   color: var(--cyan);
+}
+
+.personal-answer strong {
+  color: var(--text);
+  font-size: 17px;
+}
+
+.personal-answer small {
+  color: var(--mint);
 }
 
 .hero-highlights {
   position: absolute;
   z-index: 1;
   right: max(24px, calc((100% - 1200px) / 2));
-  bottom: 28px;
+  bottom: 24px;
   left: max(24px, calc((100% - 1200px) / 2));
   display: grid;
   grid-template-columns: 1fr 54px 1.42fr;
@@ -274,8 +310,8 @@ svg {
 }
 
 .hero-highlights article {
-  min-height: 94px;
-  padding: 16px 22px;
+  min-height: 84px;
+  padding: 12px 22px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -316,7 +352,7 @@ svg {
 }
 
 .problem {
-  padding: 72px 0 94px;
+  padding: 44px 0 94px;
 }
 
 .problem-layout {
@@ -695,8 +731,8 @@ svg {
   }
 
   .hero {
-    min-height: max(700px, calc(100svh - 100px));
-    padding: 88px 18px 124px;
+    min-height: max(844px, calc(100svh - 72px));
+    padding: 88px 18px 156px;
   }
 
   .hero-image {
@@ -730,16 +766,26 @@ svg {
   }
 
   .hero-contrast {
-    margin-top: 22px;
-    gap: 6px;
+    margin-top: 20px;
+    padding: 10px;
   }
 
-  .hero-contrast p {
-    gap: 11px;
+  .contrast-title {
+    margin-bottom: 8px;
   }
 
-  .hero-contrast span {
-    width: 140px;
+  .contrast-grid article {
+    min-height: 79px;
+    padding: 9px;
+    gap: 5px;
+  }
+
+  .contrast-grid strong {
+    font-size: 12px;
+  }
+
+  .personal-answer strong {
+    font-size: 14px;
   }
 
   .hero-highlights {
@@ -750,8 +796,8 @@ svg {
   }
 
   .hero-highlights article {
-    min-height: 66px;
-    padding: 10px 13px;
+    min-height: 61px;
+    padding: 8px 13px;
     gap: 2px;
     border-right: 0;
   }
