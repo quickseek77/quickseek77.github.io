@@ -1,25 +1,310 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>苑宝松的个人主页</title>
-</head>
-<body>
-  <h1>苑宝松</h1>
-  <p>欢迎来到我的个人主页。</p>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Playground to PhD - 从一句话出发，快速进入陌生技术领域的 AI-native 领域进入系统。"
+    />
+    <meta name="theme-color" content="#071014" />
+    <title>Playground to PhD | 给我一句话，带你走进新的领域</title>
+    <link rel="preload" href="assets/hero-knowledge-space.webp" as="image" type="image/webp" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Playground to PhD 首页">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>Playground to PhD</span>
+      </a>
+      <nav class="site-nav" aria-label="主导航">
+        <a href="#journey">路径</a>
+        <a href="#playground">Playground</a>
+        <a href="#vision">愿景</a>
+      </nav>
+      <a class="header-action" href="#playground">
+        进入示例
+        <svg aria-hidden="true" viewBox="0 0 16 16">
+          <path d="M3 8h9M8 3l5 5-5 5" />
+        </svg>
+      </a>
+    </header>
 
-  <h2>About Me</h2>
-  <p>我是电子科技大学软件工程专业本科生，研究兴趣包括大语言模型、信息检索与内容生成。</p>
+    <main>
+      <section class="hero" id="top">
+        <picture class="hero-picture">
+          <source srcset="assets/hero-knowledge-space.webp" type="image/webp" />
+          <img
+            class="hero-image"
+            src="assets/hero-knowledge-space.png"
+            alt=""
+            width="1805"
+            height="871"
+          />
+        </picture>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">AI-native field entry system</p>
+          <h1>Playground<br /><span>to PhD</span></h1>
+          <p class="slogan">给我一句话，带你走进新的领域</p>
+          <p class="intro">
+            不再从搜索结果堆里拼凑答案。AI 为你的背景生成概念地图、热点缘由与可玩的理解路径。
+          </p>
 
-  <h2>Research</h2>
-  <ul>
-    <li>Content Generation in Information Retrieval Systems</li>
-    <li>LLM Creativity and Platform Ecosystems</li>
-    <li>Implicit Fairness in LLM-based Information Delivery</li>
-  </ul>
+          <form class="query-box" id="query-form">
+            <label for="curiosity">输入一个好奇心</label>
+            <div class="query-row">
+              <input
+                id="curiosity"
+                name="curiosity"
+                type="text"
+                autocomplete="off"
+                value="Video Diffusion 是如何生成连贯视频的？"
+              />
+              <button type="submit">
+                进入领域
+                <svg aria-hidden="true" viewBox="0 0 16 16">
+                  <path d="M3 8h9M8 3l5 5-5 5" />
+                </svg>
+              </button>
+            </div>
+            <div class="suggestions" aria-label="示例问题">
+              <button type="button" data-query="MCP 为什么突然火了？" data-topic="mcp">MCP 为什么火了？</button>
+              <button type="button" data-query="World Model 如何帮助机器人？" data-topic="world">World Model</button>
+              <button type="button" data-query="Video Diffusion 是如何生成连贯视频的？" data-topic="diffusion">
+                Video Diffusion
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="hero-route" aria-label="产品路径">
+          <div><b>01</b><span>输入好奇心</span></div>
+          <div><b>02</b><span>理解你的背景</span></div>
+          <div><b>03</b><span>生成领域入口</span></div>
+          <div><b>04</b><span>玩出直觉</span></div>
+        </div>
+      </section>
 
-  <h2>Contact</h2>
-  <p>Email: yuanbaosong4@gmail.com</p>
-</body>
+      <section class="problem section-light">
+        <div class="section-shell problem-layout reveal">
+          <div>
+            <p class="eyebrow ink">The missing entry point</p>
+            <h2>信息不缺。<br />缺的是进入方式。</h2>
+          </div>
+          <div class="problem-copy">
+            <p>
+              当 <strong>MCP</strong>、<strong>World Model</strong> 或
+              <strong>3D Gaussian Splatting</strong> 突然出现在眼前，真正困难的不是找到定义，而是判断：
+              <em>它为何重要，和我有什么关系，是否值得深入。</em>
+            </p>
+            <div class="signal-grid">
+              <div><b>看懂结构</b><span>建立整体认知地图</span></div>
+              <div><b>捕捉价值</b><span>理解为何正在发生</span></div>
+              <div><b>找到方向</b><span>知道下一步读什么</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="journey" id="journey">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <p class="eyebrow">One curiosity, one route</p>
+            <h2>从认知钩子到领域入口</h2>
+            <p>一句话、截图、链接或 paper figure，都可以成为起点。</p>
+          </div>
+          <ol class="journey-track reveal">
+            <li>
+              <span class="step-no">01</span>
+              <h3>捕获问题</h3>
+              <p>低摩擦输入真实好奇心，而非检索关键词。</p>
+            </li>
+            <li>
+              <span class="step-no">02</span>
+              <h3>适配背景</h3>
+              <p>以你的研究方向、知识层级与关注点重组解释。</p>
+            </li>
+            <li>
+              <span class="step-no">03</span>
+              <h3>构建入口</h3>
+              <p>概念地图、热点原因与阅读路径一次成型。</p>
+            </li>
+            <li>
+              <span class="step-no">04</span>
+              <h3>交互理解</h3>
+              <p>在 Playground 中改变参数，直观看见机制。</p>
+            </li>
+            <li>
+              <span class="step-no">05</span>
+              <h3>持续探索</h3>
+              <p>连接论文、创作者内容与邻近趋势。</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="playground" id="playground">
+        <div class="section-shell">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Playground showcase</p>
+            <h2>不是阅读一份答案，而是玩懂一个方向</h2>
+          </div>
+
+          <div class="demo reveal" aria-label="领域入口交互演示">
+            <header class="demo-header">
+              <div>
+                <p class="demo-label">当前入口</p>
+                <h3 id="topic-title">Video Diffusion</h3>
+              </div>
+              <div class="topic-tabs" role="tablist" aria-label="领域示例">
+                <button class="is-active" role="tab" aria-selected="true" data-topic="diffusion">Video Diffusion</button>
+                <button role="tab" aria-selected="false" data-topic="mcp">MCP</button>
+                <button role="tab" aria-selected="false" data-topic="world">World Model</button>
+              </div>
+            </header>
+
+            <div class="demo-grid">
+              <section class="context-panel" aria-label="理解背景">
+                <p class="panel-title">为什么值得关注</p>
+                <h4 id="why-title">视频生成跨过“每帧都好看”的阶段</h4>
+                <p class="panel-body" id="why-body">
+                  模型开始把时间一致性纳入生成过程，使创作、仿真和训练数据生成出现新的可行路径。
+                </p>
+                <div class="trend">
+                  <span>关键变化</span>
+                  <strong id="trend-text">时序一致性 + 可控生成</strong>
+                </div>
+                <p class="panel-title audience-title">你的背景</p>
+                <div class="audience-toggle" role="group" aria-label="知识背景">
+                  <button data-audience="beginner">本科生</button>
+                  <button class="is-active" data-audience="researcher">研究者</button>
+                  <button data-audience="product">产品 / 投资</button>
+                </div>
+                <p class="audience-output" id="audience-output">
+                  聚焦 latent video diffusion、temporal attention 与评估瓶颈。
+                </p>
+              </section>
+
+              <section class="map-panel" aria-label="概念地图">
+                <div class="panel-head">
+                  <p class="panel-title">概念地图</p>
+                  <span class="live-dot">live</span>
+                </div>
+                <div class="concept-map" id="concept-map"></div>
+              </section>
+
+              <section class="depth-panel" aria-label="分层解释">
+                <div class="panel-head">
+                  <p class="panel-title">理解深度</p>
+                  <output id="depth-level" for="depth-slider">03</output>
+                </div>
+                <input id="depth-slider" class="depth-slider" type="range" min="1" max="5" value="3" />
+                <div class="depth-scale" aria-hidden="true"><span>直觉</span><span>基础</span><span>本科</span><span>工程</span><span>前沿</span></div>
+                <h4 id="depth-title">本科理工科</h4>
+                <p class="panel-body" id="depth-body">
+                  模型在噪声空间逐步恢复视频，并借助跨帧注意力约束相邻画面的主体与运动关系。
+                </p>
+              </section>
+            </div>
+
+            <div class="lab-grid">
+              <section class="denoise-panel" aria-label="去噪演示">
+                <div class="panel-head">
+                  <div>
+                    <p class="panel-title">交互实验</p>
+                    <h4 id="lab-title">Diffusion 去噪过程</h4>
+                  </div>
+                  <output id="stage-value" for="stage-slider">Step 14 / 40</output>
+                </div>
+                <div class="noise-board" id="noise-board" aria-hidden="true"></div>
+                <input id="stage-slider" class="stage-slider" type="range" min="1" max="40" value="14" />
+                <div class="metric-row">
+                  <div><span>残余噪声</span><strong id="noise-metric">65%</strong></div>
+                  <div><span>结构可见度</span><strong id="form-metric">35%</strong></div>
+                  <div><span>时间一致性</span><strong id="motion-metric">28%</strong></div>
+                </div>
+              </section>
+
+              <section class="attention-panel" aria-label="注意力可视化">
+                <div class="panel-head">
+                  <div>
+                    <p class="panel-title">关联视图</p>
+                    <h4 id="attention-title">Temporal Attention</h4>
+                  </div>
+                  <span class="tag" id="attention-tag">frames</span>
+                </div>
+                <div class="attention-body">
+                  <div class="attention-terms" id="attention-terms"></div>
+                  <div class="attention-grid" id="attention-grid" aria-hidden="true"></div>
+                </div>
+              </section>
+
+              <section class="reading-panel" aria-label="延伸阅读">
+                <div class="panel-head">
+                  <p class="panel-title">延伸探索</p>
+                  <span class="tag">curated</span>
+                </div>
+                <div class="reading-list" id="reading-list"></div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="difference section-light">
+        <div class="section-shell">
+          <div class="section-heading ink reveal">
+            <p class="eyebrow ink">Why Playground to PhD</p>
+            <h2>AI 不只回答问题，<br />它构建你的进入路径。</h2>
+          </div>
+          <div class="principles reveal">
+            <article>
+              <span>01</span>
+              <h3>领域进入，而非搜索</h3>
+              <p>把碎片信息整理为结构、动因与明确的下一步。</p>
+            </article>
+            <article>
+              <span>02</span>
+              <h3>因人而异的解释</h3>
+              <p>同一主题，对研究者、工程师与决策者给出不同入口。</p>
+            </article>
+            <article>
+              <span>03</span>
+              <h3>交互建立直觉</h3>
+              <p>在参数变化与可视反馈中理解技术机制。</p>
+            </article>
+            <article>
+              <span>04</span>
+              <h3>AI 与优质内容结合</h3>
+              <p>连接 paper、视频、技术博客与可信创作者。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="vision" id="vision">
+        <div class="vision-lines" aria-hidden="true"></div>
+        <div class="section-shell vision-inner reveal">
+          <p class="eyebrow">The next interface for knowledge</p>
+          <h2>AI 正在改变人类<br />进入陌生知识空间的方式。</h2>
+          <p>
+            从一个好奇心开始，快速理解新的技术世界，并决定下一条值得探索的路径。
+          </p>
+          <a class="vision-action" href="#top">
+            开始一次领域探索
+            <svg aria-hidden="true" viewBox="0 0 16 16">
+              <path d="M3 8h9M8 3l5 5-5 5" />
+            </svg>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span class="brand"><span class="brand-mark" aria-hidden="true"></span>Playground to PhD</span>
+      <p>从一句话，进入新的领域。</p>
+    </footer>
+  </body>
 </html>
