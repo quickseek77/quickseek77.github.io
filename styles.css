@@ -149,8 +149,8 @@ svg {
 
 .hero {
   position: relative;
-  min-height: clamp(680px, calc(100svh - 92px), 820px);
-  padding: clamp(104px, 13vh, 124px) max(24px, calc((100% - 1200px) / 2)) 112px;
+  min-height: clamp(740px, calc(100svh - 70px), 860px);
+  padding: clamp(100px, 12vh, 118px) max(24px, calc((100% - 1200px) / 2)) 160px;
   display: flex;
   align-items: flex-start;
   overflow: hidden;
@@ -223,60 +223,91 @@ svg {
   line-height: 1.75;
 }
 
-.positioning {
-  margin-top: 34px;
-  padding-left: 17px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  border-left: 2px solid var(--cyan);
+.hero-contrast {
+  margin-top: 26px;
+  width: min(485px, 100%);
+  display: grid;
+  gap: 7px;
 }
 
-.positioning span {
+.hero-contrast p {
+  display: flex;
+  align-items: baseline;
+  gap: 17px;
   color: var(--text-dim);
   font-size: 13px;
 }
 
-.positioning strong {
-  font-size: 17px;
+.hero-contrast span {
+  width: 146px;
+  flex-shrink: 0;
+  color: #728581;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hero-contrast .product {
+  color: var(--text);
+  font-size: 15px;
   font-weight: 520;
 }
 
-.hero-route {
+.hero-contrast .product span {
+  color: var(--cyan);
+}
+
+.hero-highlights {
   position: absolute;
   z-index: 1;
   right: max(24px, calc((100% - 1200px) / 2));
-  bottom: 34px;
+  bottom: 28px;
   left: max(24px, calc((100% - 1200px) / 2));
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 54px 1.42fr;
+  align-items: center;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: rgba(8, 17, 21, 0.76);
   backdrop-filter: blur(12px);
 }
 
-.hero-route div {
-  height: 66px;
-  padding: 0 22px;
+.hero-highlights article {
+  min-height: 94px;
+  padding: 16px 22px;
   display: flex;
-  gap: 18px;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
   border-right: 1px solid var(--line);
 }
 
-.hero-route div:last-child {
+.hero-highlights article:last-child {
   border-right: 0;
 }
 
-.hero-route b,
+.hero-highlights b,
 .step-no {
   color: var(--cyan);
   font-size: 12px;
 }
 
-.hero-route span {
-  font-size: 14px;
+.hero-highlights strong {
+  font-size: 17px;
+  font-weight: 530;
+}
+
+.hero-highlights p {
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.flow-arrow {
+  color: var(--amber);
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .section-light {
@@ -698,30 +729,47 @@ svg {
     overflow-wrap: anywhere;
   }
 
-  .positioning {
-    margin-top: 28px;
+  .hero-contrast {
+    margin-top: 22px;
+    gap: 6px;
   }
 
-  .hero-route {
+  .hero-contrast p {
+    gap: 11px;
+  }
+
+  .hero-contrast span {
+    width: 140px;
+  }
+
+  .hero-highlights {
     right: 18px;
     bottom: 18px;
     left: 18px;
-    grid-template-columns: repeat(2, 1fr);
+    display: block;
   }
 
-  .hero-route div {
-    height: 48px;
-    padding: 0 12px;
-    gap: 9px;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .hero-route div:nth-child(even) {
+  .hero-highlights article {
+    min-height: 66px;
+    padding: 10px 13px;
+    gap: 2px;
     border-right: 0;
   }
 
-  .hero-route div:nth-last-child(-n + 2) {
-    border-bottom: 0;
+  .hero-highlights article:first-child {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .hero-highlights strong {
+    font-size: 15px;
+  }
+
+  .hero-highlights p {
+    font-size: 11px;
+  }
+
+  .flow-arrow {
+    display: none;
   }
 
   .problem {
